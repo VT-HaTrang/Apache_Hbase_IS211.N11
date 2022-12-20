@@ -46,6 +46,9 @@ sudo apt install openjdk-8-jdk
 wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
 tar -zxvf hadoop-3.3.2.tar.gz
 ```
+- Thay đổi Adapter 2:
+![image](https://user-images.githubusercontent.com/88712945/208700218-42e9a866-dd32-4422-bd49-7bc93067f17b.png)
+
 -	Thực hiện chỉnh sửa file 01-netcfg.yaml và cấu hình mạng như dưới đây:
 ```php 
 sudo vim /etc/netplan/01-netcfg.yaml
@@ -61,6 +64,8 @@ sudo ip a
 ```php
 sudo nano /etc/hosts
 ```
+![image](https://user-images.githubusercontent.com/88712945/208700589-a7ea5d3c-7b92-45a3-ba4e-c4191c1db48e.png)
+
 -	Thực hiện chỉnh sửa file ~/.bashrc:
 ```php
 sudo nano ~/.bashrc
