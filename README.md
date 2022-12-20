@@ -15,3 +15,5 @@ HBase thực chất là một NoSQL điển hình nên vì thế các table củ
 - Lưu trữ dữ liệu đáng tin cậy, được các hãng công nghệ trên thế giới sử dụng trên quy mô lớn.</br>
 
 # HƯỚNG DẪN CÀI ĐẶT
+# DEMO THAO TÁC VỚI DỮ LIỆU TRÊN HBASE SHELL
+![DemoHBase](https://drive.google.com/file/d/1R_dXyvMVOZqJw3kMkFv5KDT34hDjH7F_/view?usp=share_link) 
