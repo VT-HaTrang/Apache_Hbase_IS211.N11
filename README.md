@@ -35,5 +35,24 @@ Các bước cài Hadoop trên 3 máy: </br>
 sudo adduser hadoopuser
 sudo usermod -aG sudo hadoopuser
 ```
+- Thực hiện đăng nhập vào hadoopuser
+-	Thực hiện update và cài đặt jdk:
+```php
+sudo apt update
+sudo apt install openjdk-8-jdk
+```
+-	Thực hiện download hadoop:
+```php
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
+tar -zxvf hadoop-3.3.2.tar.gz
+```
+-	Thực hiện chỉnh sửa file 01-netcfg.yaml và cấu hình mạng như dưới đây:
+```php 
+sudo vim /etc/netplan/01-netcfg.yaml
+```
+![image](https://user-images.githubusercontent.com/88712945/208697818-429dac9a-4bc3-497d-988b-55825fb37a2f.png)
+
+
+
 
 
