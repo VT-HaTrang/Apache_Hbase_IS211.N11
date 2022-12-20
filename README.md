@@ -50,7 +50,118 @@ tar -zxvf hadoop-3.3.2.tar.gz
 ```php 
 sudo vim /etc/netplan/01-netcfg.yaml
 ```
-![image](https://user-images.githubusercontent.com/88712945/208697818-429dac9a-4bc3-497d-988b-55825fb37a2f.png)
+![image](https://user-images.githubusercontent.com/88712945/208697818-429dac9a-4bc3-497d-988b-55825fb37a2f.png) </br>
+
+-	Thực hiện apply netplan và kiểm tra ip:
+```php
+sudo netplan apply
+sudo ip a
+```
+-	Thực hiện chỉnh sửa file host và thay đổi hostname: 
+```php
+sudo nano /etc/hosts
+```
+-	Thực hiện chỉnh sửa file ~/.bashrc:
+```php
+sudo nano ~/.bashrc
+```
+Sau đó thêm vào những lệnh như sau:
+-	Thực hiện các lệnh sau:
+```php
+source ~/.bashrc
+git clone https://github.com/nilesh-g/hadoop-cluster-install.git
+ ```
+-	Copy từ hadoop-cluster-install/master qua máy tnmaster:
+```php
+cp hadoop-cluster-install/master/* hadoop-3.3.2/etc/hadoop/
+```
+-	Kiểm tra lại các file file:
+```php
+cd hadoop-3.3.2/etc/hadoop/
+```
+```php
+sudo nano hadoop-env.sh
+```
+```php
+sudo nano core-site.xml
+```
+
+```php
+sudo nano hdfs-site.xml
+``` 
+
+```php
+sudo nano mapred-site.xml
+``` 
+
+```php
+sudo nano yarn-site.xml
+```
+
+```php
+sudo nano workers
+```
+
+
+-	Thực hiện clone tnmaster thành 2 máy slave như sau:
+ 
+ 
+ 
+
+Thực hiện ở cả 2 máy slaves những bước sau
+-	Đăng nhập vào hadoopuser
+ 
+-	Cấu hình file 01-netcfg.yaml:
+ 
+
+-	Kiểm tra lại ip đã được chỉnh sửa:
+ 
+
+-	Chỉnh sửa file /etc/hostname:
+ 
+
+-	Copy từ hadoop-cluster-install/workder qua:
+```php
+cp hadoop-cluster-install/worker/* hadoop-3.3.2/etc/hadoop/
+``` 
+
+-	Ta thực hiện kiểm tra các file vừa copy:
+ 
+ 
+ 
+ 
+ 
+
+	Mở 3 máy và thực hiện các lệnh sau:
+-	Thực hiện các lệnh sau (trên tnmaster):
+```php
+ssh-keygen -t rsa -P “”
+```
+
+
+
+
+-	Copy qua các máy (trên tnmaster):
+ 
+ 
+ 
+-	Kiểm tra kết nối bằng ssh tới các máy (trên tnmaster):
+ 
+ 
+ 
+-	Thực hiện chạy các lệnh sau (trên tnmaster):
+```php
+cd ~
+hdfs namenode -format
+```
+ 
+
+-	Thực hiện khởi chạy hadoop và kiểm tra quá trình hoàn tất (trên tnmaster):
+```php
+start-dfs.sh
+start-yarn.sh
+jps
+```  
 
 
 
