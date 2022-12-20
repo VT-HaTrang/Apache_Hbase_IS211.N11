@@ -1,0 +1,213 @@
+ĐỀ TÀI: TÌM HIỂU VỀ HQTCSDL NOSQL - APACHE HBASE
+
+-- Tạo bảng và các họ cột
+create 'cuahang', 'ThongTinCH', 'DiaChi'
+create 'sanpham', 'ThongTinSP', 'ChiTiet'
+create 'nhanvien', 'TTCaNhan', 'TTLamViec'
+create 'khachhang', 'ThonTinKH', 'TichLuy'
+create 'hoadon', 'CacBenLienQuan', 'ChiTiet'
+create 'CTHD', 'SoHD', 'MaSP', 'SoLuong'
+
+-- Thêm dữ liệu
+//Bang cuahang
+put 'cuahang', 'CH01', 'ThongTinCH:TenCH', 'TiEn  HCM'
+put 'cuahang', 'CH01', 'ThongTinCH:DienThoai', '0911299790'
+put 'cuahang', 'CH01', 'DiaChi:DiaDiem', '555 Duong 3/2, P.8, Quan 10'
+put 'cuahang', 'CH01', 'DiaChi:ThanhPho', 'Ho Chi Minh'
+put 'cuahang', 'CH02', 'ThongTinCH:TenCH', 'TiEn  HaNoi'
+put 'cuahang', 'CH02', 'ThongTinCH:DienThoai', '0911289790'
+put 'cuahang', 'CH02', 'DiaChi:DiaDiem', '169 P.put Thai Ha, Lang Ha, Dong Da'
+put 'cuahang', 'CH02', 'DiaChi:ThanhPho', 'Ha Noi'
+put 'cuahang', 'CH03', 'ThongTinCH:TenCH', 'TiEn DaNang'
+put 'cuahang', 'CH03', 'ThongTinCH:DienThoai', '0911209799'
+put 'cuahang', 'CH03', 'DiaChi:DiaDiem', '393 Le Duan, Tan Chinh, Thanh Khe'
+put 'cuahang', 'CH03', 'DiaChi:ThanhPho', 'Da Nang'
+
+//Bang sanpham
+put 'sanpham', 'SP01', 'ThongTinSP:TenSP', 'Toner Klairs không mùi'
+put 'sanpham', 'SP02', 'ThongTinSP:TenSP', 'Toner Klairs dành cho da nhạy cảm'
+put 'sanpham', 'SP03', 'ThongTinSP:TenSP', 'Kem dưỡng ẩm Avene Cicalfate'
+put 'sanpham', 'SP04', 'ThongTinSP:TenSP', 'Kem dưỡng Obagi Retinol 0.5%'
+put 'sanpham', 'SP05', 'ThongTinSP:TenSP', 'Kem dưỡng La Roche-Posay'
+put 'sanpham', 'SP06', 'ThongTinSP:TenSP', 'Tinh chất Klairs Vitamin C '
+put 'sanpham', 'SP07', 'ThongTinSP:TenSP', 'Serum Timeless Vitamin B5'
+put 'sanpham', 'SP08', 'ThongTinSP:TenSP', 'Tinh chất Skin1004 Rau má Centella'
+put 'sanpham', 'SP09', 'ThongTinSP:TenSP', 'Dung dịch BHA Obagi '
+put 'sanpham', 'SP10', 'ThongTinSP:TenSP', 'Dung dịch BHA Paula's Choice'
+put 'sanpham', 'SP01'. 'ThongTinSP:ThuongHieu', 'Klairs'
+put 'sanpham', 'SP02'. 'ThongTinSP:ThuongHieu', 'Klairs'
+put 'sanpham', 'SP03'. 'ThongTinSP:ThuongHieu', 'Avene Cicalfate'
+put 'sanpham', 'SP04'. 'ThongTinSP:ThuongHieu', 'Obagi'
+put 'sanpham', 'SP05'. 'ThongTinSP:ThuongHieu', 'La Roche-Posay'
+put 'sanpham', 'SP06'. 'ThongTinSP:ThuongHieu', 'Klairs'
+put 'sanpham', 'SP07'. 'ThongTinSP:ThuongHieu', 'Timeless'
+put 'sanpham', 'SP08'. 'ThongTinSP:ThuongHieu', 'Centella'
+put 'sanpham', 'SP09'. 'ThongTinSP:ThuongHieu', 'Obagi'
+put 'sanpham', 'SP10'. 'ThongTinSP:ThuongHieu', 'Paula's Choice'
+put 'sanpham', 'SP01', 'ChiTiet:Gia', '259000'
+put 'sanpham', 'SP02', 'ChiTiet:Gia', '259000'
+put 'sanpham', 'SP03', 'ChiTiet:Gia', '389000'
+put 'sanpham', 'SP04', 'ChiTiet:Gia', '1149000'
+put 'sanpham', 'SP05', 'ChiTiet:Gia', '257000'
+put 'sanpham', 'SP06', 'ChiTiet:Gia', '289000'
+put 'sanpham', 'SP07', 'ChiTiet:Gia', '380000'
+put 'sanpham', 'SP08', 'ChiTiet:Gia', '400000'
+put 'sanpham', 'SP09', 'ChiTiet:Gia', '912000'
+put 'sanpham', 'SP10', 'ChiTiet:Gia', '949000'
+put 'sanpham', 'SP01', 'ChiTiet:LoaiSP', 'Toner'
+put 'sanpham', 'SP02', 'ChiTiet:LoaiSP', 'Toner'
+put 'sanpham', 'SP03', 'ChiTiet:LoaiSP', 'Kem dưỡng ẩm'
+put 'sanpham', 'SP04', 'ChiTiet:LoaiSP', 'Kem dưỡng ẩm'
+put 'sanpham', 'SP05', 'ChiTiet:LoaiSP', 'Kem dưỡng ẩm'
+put 'sanpham', 'SP06', 'ChiTiet:LoaiSP', 'Serum'
+put 'sanpham', 'SP07', 'ChiTiet:LoaiSP', 'Serum'
+put 'sanpham', 'SP08', 'ChiTiet:LoaiSP', 'Serum'
+put 'sanpham', 'SP09', 'ChiTiet:LoaiSP', 'Tẩy tế bào chết'
+put 'sanpham', 'SP10', 'ChiTiet:LoaiSP', 'Tẩy tế bào chết'
+
+//Bang khachhang
+put 'khachhang', 'KH01', 'ThongTinKH:TenKH', 'Nguyễn Đoàn Khánh Linh'
+put 'khachhang', 'KH02', 'ThongTinKH:TenKH', 'Trương Văn Nghĩa'
+put 'khachhang', 'KH03', 'ThongTinKH:TenKH', 'Phan Việt Ngọc'
+put 'khachhang', 'KH04', 'ThongTinKH:TenKH', 'Hoàng Thị Mai Thi'
+put 'khachhang', 'KH05', 'ThongTinKH:TenKH', 'Trần Thị Hà My'
+put 'khachhang', 'KH01', 'ThongTinKH:DiaChi', 'P. Linh Chiểu, TP. Thủ Đức - HCM'
+put 'khachhang', 'KH02', 'ThongTinKH:DiaChi', 'P6, Quận 3, Tp.HCM'
+put 'khachhang', 'KH03', 'ThongTinKH:DiaChi', 'P.Ben Nghe, Quan 1, Tp.HCM'
+put 'khachhang', 'KH04', 'ThongTinKH:DiaChi', 'Huyện Hóc Môn, Tp.HCM'
+put 'khachhang', 'KH05', 'ThongTinKH:DiaChi', 'P6, Quan 8, Tp.HCM'
+put 'khachhang', 'KH01', 'ThongTinKH:DienThoai', '0862838262'
+put 'khachhang', 'KH02', 'ThongTinKH:DienThoai', '0867272526'
+put 'khachhang', 'KH03', 'ThongTinKH:DienThoai', '0865140085'
+put 'khachhang', 'KH04', 'ThongTinKH:DienThoai', '0960379262'
+put 'khachhang', 'KH05', 'ThongTinKH:DienThoai', '0963251637'
+put 'khachhang', 'KH01', 'TichLuy:SoTien', '907000'
+put 'khachhang', 'KH02', 'TichLuy:SoTien', '259000'
+put 'khachhang', 'KH03', 'TichLuy:SoTien', '546000'
+put 'khachhang', 'KH04', 'TichLuy:SoTien', '780000'
+put 'khachhang', 'KH05', 'TichLuy:SoTien', '1861000'
+
+//Bang nhanvien
+put 'nhanvien', 'NV01', 'TTCaNhan:TenNV', 'Tô Ngọc Yến'
+put 'nhanvien', 'NV02', 'TTCaNhan:TenNV', 'Mai Thị Trinh'
+put 'nhanvien', 'NV03', 'TTCaNhan:TenNV', 'Lê Thị Thanh Trúc'
+put 'nhanvien', 'NV04', 'TTCaNhan:TenNV', 'Hà Trần Quốc Tiến'
+put 'nhanvien', 'NV05', 'TTCaNhan:TenNV', 'Vũ Thảo Linh'
+put 'nhanvien', 'NV01', 'TTCaNhan:NgaySinh', '04/12/1996'
+put 'nhanvien', 'NV02', 'TTCaNhan:NgaySinh', '04/04/1995'
+put 'nhanvien', 'NV03', 'TTCaNhan:NgaySinh', '15/01/1994'
+put 'nhanvien', 'NV04', 'TTCaNhan:NgaySinh', '17/06/1995'
+put 'nhanvien', 'NV05', 'TTCaNhan:NgaySinh', '10/10/1996'
+put 'nhanvien', 'NV01', 'TTCaNhan:DienThoai', '0397172623'
+put 'nhanvien', 'NV02', 'TTCaNhan:DienThoai', '0982544013'
+put 'nhanvien', 'NV03', 'TTCaNhan:DienThoai', '0326786536'
+put 'nhanvien', 'NV04', 'TTCaNhan:DienThoai', '0355650107'
+put 'nhanvien', 'NV05', 'TTCaNhan:DienThoai', '0335070943'
+put 'nhanvien', 'NV01', 'TTCaNhan:GioiTinh', 'Nu'
+put 'nhanvien', 'NV02', 'TTCaNhan:GioiTinh', 'Nu'
+put 'nhanvien', 'NV03', 'TTCaNhan:GioiTinh', 'Nu'
+put 'nhanvien', 'NV04', 'TTCaNhan:GioiTinh', 'Nam'
+put 'nhanvien', 'NV05', 'TTCaNhan:GioiTinh', 'Nu'
+put 'nhanvien', 'NV01', 'TTLamViec:MaCH', 'CH01'
+put 'nhanvien', 'NV02', 'TTLamViec:MaCH', 'CH01'
+put 'nhanvien', 'NV03', 'TTLamViec:MaCH', 'CH02'
+put 'nhanvien', 'NV04', 'TTLamViec:MaCH', 'CH02'
+put 'nhanvien', 'NV05', 'TTLamViec:MaCH', 'CH03'
+put 'nhanvien', 'NV01', 'TTLamViec:NgayVL', '05/02/2022'
+put 'nhanvien', 'NV02', 'TTLamViec:NgayVL', '05/12/2022'
+put 'nhanvien', 'NV03', 'TTLamViec:NgayVL', '05/12/2022'
+put 'nhanvien', 'NV04', 'TTLamViec:NgayVL', '05/02/2022'
+put 'nhanvien', 'NV05', 'TTLamViec:NgayVL', '16/11/2022'
+
+//Bang hoadon
+put 'hoadon', 'HD01', 'CacBenLienQuan:MaKH', 'KH01'
+put 'hoadon', 'HD02', 'CacBenLienQuan:MaKH', 'KH02'
+put 'hoadon', 'HD03', 'CacBenLienQuan:MaKH', 'KH03'
+put 'hoadon', 'HD04', 'CacBenLienQuan:MaKH', 'KH04'
+put 'hoadon', 'HD05', 'CacBenLienQuan:MaKH', 'KH05'
+put 'hoadon', 'HD01', 'CacBenLienQuan:MaCH', 'CH01'
+put 'hoadon', 'HD02', 'CacBenLienQuan:MaCH', 'CH01'
+put 'hoadon', 'HD03', 'CacBenLienQuan:MaCH', 'CH02'
+put 'hoadon', 'HD04', 'CacBenLienQuan:MaCH', 'CH02'
+put 'hoadon', 'HD05', 'CacBenLienQuan:MaCH', 'CH03'
+put 'hoadon', 'HD01', 'CacBenLienQuan:MaNV', 'NV01'
+put 'hoadon', 'HD02', 'CacBenLienQuan:MaNV', 'NV02'
+put 'hoadon', 'HD03', 'CacBenLienQuan:MaNV', 'NV03'
+put 'hoadon', 'HD04', 'CacBenLienQuan:MaNV', 'NV04'
+put 'hoadon', 'HD05', 'CacBenLienQuan:MaNV', 'NV05'
+put 'hoadon', 'HD01', 'ChiTiet:NgayHD', '10/12/2022'
+put 'hoadon', 'HD02', 'ChiTiet:NgayHD', '10/12/2022'
+put 'hoadon', 'HD03', 'ChiTiet:NgayHD', '10/12/2022'
+put 'hoadon', 'HD04', 'ChiTiet:NgayHD', '10/12/2022'
+put 'hoadon', 'HD05', 'ChiTiet:NgayHD', '11/12/2022'
+put 'hoadon', 'HD01', 'ChiTiet:ThanhTien', '907000'
+put 'hoadon', 'HD02', 'ChiTiet:ThanhTien', '259000'
+put 'hoadon', 'HD03', 'ChiTiet:ThanhTien', '546000'
+put 'hoadon', 'HD04', 'ChiTiet:ThanhTien', '780000'
+put 'hoadon', 'HD05', 'ChiTiet:ThanhTien', '1861000'
+
+
+//Bang CTHD
+put 'CTHD', '1', 'SoHD:SoHD', 'HD01'
+put 'CTHD', '2', 'SoHD:SoHD', 'HD01'
+put 'CTHD', '3', 'SoHD:SoHD', 'HD01'
+put 'CTHD', '4', 'SoHD:SoHD', 'HD02'
+put 'CTHD', '5', 'SoHD:SoHD', 'HD03'
+put 'CTHD', '6', 'SoHD:SoHD', 'HD03'
+put 'CTHD', '7', 'SoHD:SoHD', 'HD04'
+put 'CTHD', '8', 'SoHD:SoHD', 'HD04'
+put 'CTHD', '9', 'SoHD:SoHD', 'HD05'
+put 'CTHD', '10', 'SoHD:SoHD', 'HD05'
+put 'CTHD', '1', 'MaSP:MaSP', 'SP01'
+put 'CTHD', '2', 'MaSP:MaSP', 'SP02'
+put 'CTHD', '3', 'MaSP:MaSP', 'SP03'
+put 'CTHD', '4', 'MaSP:MaSP', 'SP04'
+put 'CTHD', '5', 'MaSP:MaSP', 'SP05'
+put 'CTHD', '6', 'MaSP:MaSP', 'SP06'
+put 'CTHD', '7', 'MaSP:MaSP', 'SP07'
+put 'CTHD', '8', 'MaSP:MaSP', 'SP08'
+put 'CTHD', '9', 'MaSP:MaSP', 'SP09'
+put 'CTHD', '10', 'MaSP:MaSP', 'SP10'
+put 'CTHD', '1', 'SoLuong:SL', '1'
+put 'CTHD', '2', 'SoLuong:SL', '1'
+put 'CTHD', '3', 'SoLuong:SL', '1'
+put 'CTHD', '4', 'SoLuong:SL', '1'
+put 'CTHD', '5', 'SoLuong:SL', '1'
+put 'CTHD', '6', 'SoLuong:SL', '1'
+put 'CTHD', '7', 'SoLuong:SL', '1'
+put 'CTHD', '8', 'SoLuong:SL', '1'
+put 'CTHD', '9', 'SoLuong:SL', '1'
+put 'CTHD', '10', 'SoLuong:SL', '1'
+
+--Sửa dữ liệu
+put 'sanpham', 'SP10', 'ChiTiet:Gia', '1000000'
+#hiện tại ta thấy sp10 có giá là 949000. Sau khi sửa giá của sản phẩm SP10 là 1000000 được
+cập nhật ở cả 3 node.
+
+--Xóa dữ liệu
+delete 'sanpham', 'SP10', 'ChiTiet:Gia'
+deleteall 'sanpham', 'SP10' put#xóa tất cả các rows có rowID là 'SP10'
+
+#Các thao tác với dữ liệu khác
+-- count: đếm số hàng của một bảng.
+count 'sanpham' 
+
+-- KeyOnlyFilter: Bộ lọc sẽ chỉ trả về các giá trị key trong cặp key-value (value sẽ được viết
+lại thành trống). Bộ lọc này có thể được sử dụng để lấy tất cả các key mà không cần phải 
+lấy cả các value.
+scan 'khachhang', {FILTER => "KeyOnlyFilter()"}
+
+-- Prefix Filter: Dùng để lọc các record dựa trên RowKey.
+scan 'khachhang', {FILTER => PrefixFilter('KH02')"}
+
+-- Column Prefix Filter: Bộ lọc này được sử dụng để chỉ chọn những key có cột khớp với
+một tiền tố cụ thể.
+scan 'khachhang', {FILTER => "ColumnPrefixFilter('T')"}
+
+-- Multi Column Prefix Filter: Nó hoạt động giống như Column Prefix Filter nhưng cho phép
+chỉ định nhiều tiền tố.
+scan 'khachhang', {FILTER => "MultipleColumnPrefixFilter('T', 'S')"}
+
+-- Value Filter: Dùng để lọc các records theo value đưa ra.
+scan 'khachhang', {COLUMNS => 'ThongTinKH:TenKH', FILTER =>
+ "ValueFilter(=,'binary:PhanVietNgoc')"}
