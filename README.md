@@ -14,6 +14,26 @@ HBase thực chất là một NoSQL điển hình nên vì thế các table củ
 - Nhiều extension hỗ trợ Hbase cho nhiều ngôn ngữ như Java, PHP, Python… </br>
 - Lưu trữ dữ liệu đáng tin cậy, được các hãng công nghệ trên thế giới sử dụng trên quy mô lớn.</br>
 
-# HƯỚNG DẪN CÀI ĐẶT
-# DEMO THAO TÁC VỚI DỮ LIỆU TRÊN HBASE SHELL
-![DemoHBase](https://drive.google.com/file/d/1R_dXyvMVOZqJw3kMkFv5KDT34hDjH7F_/view?usp=share_link) 
+## HƯỚNG DẪN CÀI ĐẶT
+# Yêu cầu
+Các phiên bản được sử dụng xuyên suốt trong quá trình cài đặt:
+-	VirtualBox
+-	Ubuntu server 22.04 
+-	Java 8
+-	Hadoop 3.3.2
+-	Apache Zookeeper 3.6.3
+-	Apache HBase
+</br>
+Tạo 3 máy ảo sử dụng phiên bản Ubuntu server 22.04 trên VirtualBox bao gồm: tnmaster, tnslave1, tnslave2.
+
+# Cài đặt Hadoop
+Trước khi chúng ta bắt đầu định cấu hình HBase, chúng ta cần có một cụm Hadoop đang chạy, đây sẽ là bộ lưu trữ cho HBase (dữ liệu lưu trữ Hbase trong Hệ thống tệp phân tán Hadoop). </br>
+Các bước cài Hadoop trên 3 máy: </br>
+Đầu tiên, thực hiện các bước sau trên máy tnmaster:
+-	Tạo user hadoopuser và thực hiện đăng nhập:
+```php
+sudo adduser hadoopuser
+sudo usermod -aG sudo hadoopuser
+```
+
+
