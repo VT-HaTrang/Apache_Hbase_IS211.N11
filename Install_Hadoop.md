@@ -1,17 +1,4 @@
-
-## HƯỚNG DẪN CÀI ĐẶT
-# Yêu cầu
-Các phiên bản được sử dụng xuyên suốt trong quá trình cài đặt:
--	VirtualBox
--	Ubuntu server 22.04 
--	Java 8
--	Hadoop 3.3.2
--	Apache Zookeeper 3.6.3
--	Apache HBase
-</br>
-Tạo 3 máy ảo sử dụng phiên bản Ubuntu server 22.04 trên VirtualBox bao gồm: tnmaster, tnslave1, tnslave2.
-
-1. Cài đặt Hadoop
+# 1. Cài đặt Hadoop
 Trước khi chúng ta bắt đầu định cấu hình HBase, chúng ta cần có một cụm Hadoop đang chạy, đây sẽ là bộ lưu trữ cho HBase (dữ liệu lưu trữ Hbase trong Hệ thống tệp phân tán Hadoop). </br>
 Các bước cài Hadoop trên 3 máy: </br>
 Đầu tiên, thực hiện các bước sau trên máy tnmaster:
