@@ -22,5 +22,8 @@ Các phiên bản được sử dụng xuyên suốt trong quá trình cài đ�
 -	Hadoop 3.3.2
 -	Apache Zookeeper 3.6.3
 -	Apache HBase
-</br>
 Tạo 3 máy ảo sử dụng phiên bản Ubuntu server 22.04 trên VirtualBox bao gồm: tnmaster, tnslave1, tnslave2. </br>
+# Việc cài đặt ta sẽ làm theo thứ tự: 
+- *Cài đặt Hadoop*: [Cài đặt Hadoop](https://github.com/VT-HaTrang/Apache_Hbase_IS211.N11/blob/main/Install_Hadoop.md)
+- *Cài đặt Zookeeper*: [Cài đặt Zookeeper](https://github.com/VT-HaTrang/Apache_Hbase_IS211.N11/blob/main/Install_Zookeeper.md)
+- *Cài đặt HBase*: [Cài đặt HBase](https://github.com/VT-HaTrang/Apache_Hbase_IS211.N11/blob/main/Install_HBase.md)
