@@ -24,4 +24,4 @@ Các phiên bản được sử dụng xuyên suốt trong quá trình cài đ�
 -	Apache HBase
 </br>
 Tạo 3 máy ảo sử dụng phiên bản Ubuntu server 22.04 trên VirtualBox bao gồm: tnmaster, tnslave1, tnslave2. </br>
-Cài đặt Hadoop: [I'm an inline-style link](https://www.google.com)
+Cài đặt Hadoop: [Conkas](https://github.com/nveloso/conkas)
