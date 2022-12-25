@@ -13,3 +13,15 @@ HBase thực chất là một NoSQL điển hình nên vì thế các table củ
 - Nhất quán cơ chế đọc và ghi dữ liệu dựa trên Hadoop. </br>
 - Nhiều extension hỗ trợ Hbase cho nhiều ngôn ngữ như Java, PHP, Python… </br>
 - Lưu trữ dữ liệu đáng tin cậy, được các hãng công nghệ trên thế giới sử dụng trên quy mô lớn.</br>
+## HƯỚNG DẪN CÀI ĐẶT
+# Yêu cầu
+Các phiên bản được sử dụng xuyên suốt trong quá trình cài đặt:
+-	VirtualBox
+-	Ubuntu server 22.04 
+-	Java 8
+-	Hadoop 3.3.2
+-	Apache Zookeeper 3.6.3
+-	Apache HBase
+</br>
+Tạo 3 máy ảo sử dụng phiên bản Ubuntu server 22.04 trên VirtualBox bao gồm: tnmaster, tnslave1, tnslave2.
+- **Cài đặt Hadoop: ** [Hadoop](https://github.com/VT-HaTrang/Apache_Hbase_IS211.N11/blob/main/Install_Hadoop.md)
